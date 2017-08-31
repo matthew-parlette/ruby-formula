@@ -1,5 +1,5 @@
 include:
-  - ruby
+  - ruby.package
 
 {% from "ruby/map.jinja" import ruby with context %}
 
