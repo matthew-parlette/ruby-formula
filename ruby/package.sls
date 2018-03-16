@@ -5,7 +5,7 @@
 ruby_repo:
   pkgrepo.managed:
     - humanname: ruby-ppa-{{ grains['oscodename'] }}
-    - name: deb http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu {{ grains['oscodename'] }} main
+    - name: deb http://ppa.launchpad.net/brightbox/ruby-ng/{{ grains['os'] }} {{ grains['oscodename'] }} main
     - file: /etc/apt/sources.list.d/ruby-{{ grains['oscodename'] }}.list
     - dist: {{ grains['oscodename'] }}
     - keyid: C3173AA6
