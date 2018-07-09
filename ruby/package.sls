@@ -16,14 +16,14 @@ ruby:
     - names:
       - {{ ruby.package }}
       - {{ ruby.package_bundler }}
-      - ruby-switch
+      # - ruby-switch
     - require:
       - pkgrepo: ruby_repo
 
-  cmd.run:
-    - name: ruby-switch --set {{ ruby.package }}
-    - require:
-      - pkg: ruby
+  # cmd.run:
+    # - name: ruby-switch --set {{ ruby.package }}
+    # - require:
+      # - pkg: ruby
 
 {% elif grains['os_family'] == 'RedHat' %}
 ruby:
